@@ -1,0 +1,14 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'com.codeborne:selenide:7.2.1'
+
+    testImplementation 'io.github.bonigarcia:webdrivermanager:4.4.3'
+
+    testImplementation 'org.testng:testng:7.4.0'
+}
