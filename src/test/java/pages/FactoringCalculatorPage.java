@@ -23,4 +23,72 @@ public class FactoringCalculatorPage {
     SelenideElement resultInPercentageText = $(By.id("result_perc"));
     SelenideElement resultInCurrencyText = $(By.id("result"));
 
+    public void inputValueInFieldInvoiceAmount(String value){
+        invoiceAmountInputField.setValue(value);
+    }
+
+    public void inputValueInFieldInterestRate(String value){
+        interestRateInputField.setValue(value);
+    }
+
+    public void inputValueInFieldCommissionFee(String value){
+        commissionFeeInputField.setValue(value);
+    }
+
+    public void clearFieldInvoiceAmount(){
+        invoiceAmountInputField.clear();
+    }
+
+    public void clearFieldInterestRate(){
+        interestRateInputField.clear();
+    }
+
+    public void clearFieldCommissionFee(){
+        commissionFeeInputField.clear();
+    }
+
+    public void clickButtonCalculate(){
+        calculateButton.click();
+    }
+
+    public void setAdvanceRate75Percents(){
+        advanceRateDropDownMenu.click();
+        advanceRateDropDownMenu.$$("option").get(0).click();
+    }
+
+    public void setAdvanceRate80Percents(){
+        advanceRateDropDownMenu.click();
+        advanceRateDropDownMenu.$$("option").get(1).click();
+    }
+
+    public void setAdvanceRate85Percents(){
+        advanceRateDropDownMenu.click();
+        advanceRateDropDownMenu.$$("option").get(2).click();
+    }
+
+    public void setAdvanceRate90Percents(){
+        advanceRateDropDownMenu.click();
+        advanceRateDropDownMenu.$$("option").get(3).click();
+    }
+
+    public void setPaymentTerm30Days(){
+        paymentTermDropDownMenu.click();
+        paymentTermDropDownMenu.$$("option").get(0).click();
+    }
+
+    public void setPaymentTerm60Days(){
+        paymentTermDropDownMenu.click();
+        paymentTermDropDownMenu.$$("option").get(1).click();
+    }
+
+    public void setPaymentTerm90Days(){
+        paymentTermDropDownMenu.click();
+        paymentTermDropDownMenu.$$("option").get(2).click();
+    }
+
+    public void setPaymentTerm120Days(){
+        paymentTermDropDownMenu.click();
+        paymentTermDropDownMenu.$$("option").get(3).click();
+    }
+
 }
