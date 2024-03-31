@@ -147,4 +147,10 @@ public class FactoringCalculatorPage {
         return errorMessageUnderFieldCommissionFeeText.is(text("Please enter a valid value"));
     }
 
+    public boolean isCalculationMade(){
+        double resultInPercentage = Double.parseDouble(resultInPercentageText.text());
+        double resultInCurrency = Double.parseDouble(resultInCurrencyText.text());
+
+        return resultInPercentage > 0 && resultInCurrency > 0;
+    }
 }
