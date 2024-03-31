@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
-public class FactoringCalculatorPage {
+public class FactoringCalculatorPage extends BasePage{
 
     SelenideElement invoiceAmountInputField = $(By.id("D5"));
     SelenideElement advanceRateDropDownMenu = $(By.id("D6"));
@@ -152,5 +152,79 @@ public class FactoringCalculatorPage {
         double resultInCurrency = Double.parseDouble(resultInCurrencyText.text());
 
         return resultInPercentage > 0 && resultInCurrency > 0;
+    }
+
+    public boolean isAbilityEnterLiteralValuesInFieldInvoiceAmount(){
+        char[] lettersArray = getLettersArray();
+
+        for (char letter : lettersArray) {
+            inputValueInFieldInvoiceAmount(String.valueOf(letter));
+            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) return true;
+        }
+        return false;
+    }
+
+    public boolean isAbilityEnterLiteralValuesInFieldInterestRate(){
+        char[] lettersArray = getLettersArray();
+
+        for (char letter : lettersArray) {
+            inputValueInFieldInterestRate(String.valueOf(letter));
+            if (isErrorMessageInvalidValueInFieldInterestRate()) return true;
+        }
+        return false;
+    }
+    public boolean isAbilityEnterLiteralValuesInFieldCommissionFee(){
+        char[] lettersArray = getLettersArray();
+
+        for (char letter : lettersArray) {
+            inputValueInFieldCommissionFee(String.valueOf(letter));
+            if (isErrorMessageInvalidValueInFieldCommissionFee()) return true;
+        }
+        return false;
+    }
+
+    // all symbols, but symbols "." ", "and "-"
+    public boolean isAbilityEnterSpecialSymbolsInFieldInvoiceAmount() {
+        char[] specialSymbolsArray = getSpecialSymbolsArray();
+
+        for (char specialSymbols : specialSymbolsArray) {
+            String symbol = String.valueOf(specialSymbols);
+            if (!symbol.equals(".") && !symbol.equals(",") && !symbol.equals("-")){
+                inputValueInFieldInvoiceAmount(symbol);
+            }
+
+            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) return true;
+        }
+        return false;
+    }
+
+    // all symbols, but symbols "." ", "and "-"
+    public boolean isAbilityEnterSpecialSymbolsInFieldInterestRate() {
+        char[] specialSymbolsArray = getSpecialSymbolsArray();
+
+        for (char specialSymbols : specialSymbolsArray) {
+            String symbol = String.valueOf(specialSymbols);
+            if (!symbol.equals(".") && !symbol.equals(",") && !symbol.equals("-")){
+                inputValueInFieldInterestRate(symbol);
+            }
+
+            if (isErrorMessageInvalidValueInFieldInterestRate()) return true;
+        }
+        return false;
+    }
+
+    // all symbols, but symbols "." ", "and "-"
+    public boolean isAbilityEnterSpecialSymbolsInFieldCommissionFee() {
+        char[] specialSymbolsArray = getSpecialSymbolsArray();
+
+        for (char specialSymbols : specialSymbolsArray) {
+            String symbol = String.valueOf(specialSymbols);
+            if (!symbol.equals(".") && !symbol.equals(",") && !symbol.equals("-")){
+                inputValueInFieldCommissionFee(symbol);
+            }
+
+            if (isErrorMessageInvalidValueInFieldCommissionFee()) return true;
+        }
+        return false;
     }
 }
