@@ -3,6 +3,7 @@ package pages;
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -89,6 +90,61 @@ public class FactoringCalculatorPage {
     public void setPaymentTerm120Days(){
         paymentTermDropDownMenu.click();
         paymentTermDropDownMenu.$$("option").get(3).click();
+    }
+
+    public boolean isErrorMessageAboutEmptyFieldInvoiceAmount(){
+        return errorMessageUnderFieldInvoiceAmountText.is(text("Please fill out this field"));
+    }
+
+    public boolean isErrorMessageAboutValueLessThanPermissibleInFieldInvoiceAmount(){
+        return errorMessageUnderFieldInvoiceAmountText.is(text("Value must be greater than or equal 1"));
+    }
+
+    public boolean isErrorMessageAboutManyDecimalPlacesInFieldInvoiceAmount(){
+        return errorMessageUnderFieldInvoiceAmountText.is(text("Step should be 0.01"));
+    }
+
+    public boolean isErrorMessageInvalidValueInFieldInvoiceAmount(){
+        return errorMessageUnderFieldInvoiceAmountText.is(text("Please enter a valid value"));
+    }
+
+    public boolean isErrorMessageAboutEmptyFieldInterestRate(){
+        return errorMessageUnderFieldInterestRateText.is(text("Please fill out this field"));
+    }
+
+    public boolean isErrorMessageAboutValueLessThanPermissibleInFieldInterestRate(){
+        return errorMessageUnderFieldInterestRateText.is(text("Value must be greater than or equal 0"));
+    }
+
+    public boolean isErrorMessageAboutValueGreaterThanPermissibleInFieldInterestRate(){
+        return errorMessageUnderFieldInterestRateText.is(text("Value must be less than or equal 20"));
+    }
+
+    public boolean isErrorMessageAboutManyDecimalPlacesInFieldInterestRate(){
+        return errorMessageUnderFieldInterestRateText.is(text("Step should be 0.01"));
+    }
+
+    public boolean isErrorMessageInvalidValueInFieldInterestRate(){
+        return errorMessageUnderFieldInterestRateText.is(text("Please enter a valid value"));
+    }
+    public boolean isErrorMessageAboutEmptyFieldCommissionFee(){
+        return errorMessageUnderFieldCommissionFeeText.is(text("Please fill out this field"));
+    }
+
+    public boolean isErrorMessageAboutValueLessThanPermissibleInCommissionFee(){
+        return errorMessageUnderFieldCommissionFeeText.is(text("Value must be greater than or equal 0"));
+    }
+
+    public boolean isErrorMessageAboutValueGreaterThanPermissibleInFieldCommissionFee(){
+        return errorMessageUnderFieldCommissionFeeText.is(text("Value must be less than or equal 100"));
+    }
+
+    public boolean isErrorMessageAboutManyDecimalPlacesInFieldCommissionFee(){
+        return errorMessageUnderFieldCommissionFeeText.is(text("Step should be 0.01"));
+    }
+
+    public boolean isErrorMessageInvalidValueInFieldCommissionFee(){
+        return errorMessageUnderFieldCommissionFeeText.is(text("Please enter a valid value"));
     }
 
 }
