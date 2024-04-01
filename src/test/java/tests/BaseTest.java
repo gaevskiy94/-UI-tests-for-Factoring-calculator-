@@ -3,6 +3,7 @@ package tests;
 import com.codeborne.selenide.SelenideElement;
 import org.testng.annotations.BeforeMethod;
 
+import static com.codeborne.selenide.Condition.clickable;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.open;
 
@@ -17,6 +18,7 @@ public class BaseTest {
     }
 
     public void acceptCookies(){
-        acceptCookiesButton.click();
+        if (acceptCookiesButton.is(clickable)) acceptCookiesButton.click();
+
     }
 }
