@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$x;
 
@@ -92,6 +93,10 @@ public class FactoringCalculatorPage extends BasePage{
         paymentTermDropDownMenu.$$("option").get(3).click();
     }
 
+    public void CheckNoErrorMessageUnderFieldInvoiceAmount(){
+        errorMessageUnderFieldInvoiceAmountText.shouldNotBe(visible);
+    }
+
     public boolean isErrorMessageAboutEmptyFieldInvoiceAmount(){
         return errorMessageUnderFieldInvoiceAmountText.is(text("Please fill out this field"));
     }
@@ -106,6 +111,10 @@ public class FactoringCalculatorPage extends BasePage{
 
     public boolean isErrorMessageInvalidValueInFieldInvoiceAmount(){
         return errorMessageUnderFieldInvoiceAmountText.is(text("Please enter a valid value"));
+    }
+
+    public void CheckNoErrorMessageUnderFieldInterestRate(){
+        errorMessageUnderFieldInterestRateText.shouldNotBe(visible);
     }
 
     public boolean isErrorMessageAboutEmptyFieldInterestRate(){
@@ -127,6 +136,11 @@ public class FactoringCalculatorPage extends BasePage{
     public boolean isErrorMessageInvalidValueInFieldInterestRate(){
         return errorMessageUnderFieldInterestRateText.is(text("Please enter a valid value"));
     }
+
+    public void CheckNoErrorMessageUnderFieldCommissionFee(){
+        errorMessageUnderFieldCommissionFeeText.shouldNotBe(visible);
+    }
+
     public boolean isErrorMessageAboutEmptyFieldCommissionFee(){
         return errorMessageUnderFieldCommissionFeeText.is(text("Please fill out this field"));
     }
