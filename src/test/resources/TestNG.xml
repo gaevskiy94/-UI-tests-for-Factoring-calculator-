@@ -18,4 +18,7 @@
     <parameter name="minValueForFieldInterestRate" value="0"/>
     <parameter name="numericTwoDecimalPlacesForFieldInterestRate" value="0.01"/>
     <parameter name="maxValueForFieldInterestRate" value="20"/>
+    <parameter name="minValueForFieldCommissionFee" value="0"/>
+    <parameter name="numericTwoDecimalPlacesForFieldCommissionFee" value="0.01"/>
+    <parameter name="maxValueForFieldCommissionFee" value="100"/>
 </suite>
