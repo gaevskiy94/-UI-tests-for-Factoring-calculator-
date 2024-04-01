@@ -73,6 +73,22 @@ public class FactoringCalculatorPage extends BasePage{
         advanceRateDropDownMenu.$$("option").get(3).click();
     }
 
+    public void checkSelectedAdvanceRate75Percents(){
+        advanceRateDropDownMenu.shouldBe(text("75"));
+    }
+
+    public void checkSelectedAdvanceRate80Percents(){
+        advanceRateDropDownMenu.shouldBe(text("80"));
+    }
+
+    public void checkSelectedAdvanceRate85Percents(){
+        advanceRateDropDownMenu.shouldBe(text("85"));
+    }
+
+    public void checkSelectedAdvanceRate90Percents(){
+        advanceRateDropDownMenu.shouldBe(text("90"));
+    }
+
     public void setPaymentTerm30Days(){
         paymentTermDropDownMenu.click();
         paymentTermDropDownMenu.$$("option").get(0).click();
@@ -93,7 +109,23 @@ public class FactoringCalculatorPage extends BasePage{
         paymentTermDropDownMenu.$$("option").get(3).click();
     }
 
-    public void CheckNoErrorMessageUnderFieldInvoiceAmount(){
+    public void checkSelectPaymentTerm30Days(){
+        paymentTermDropDownMenu.shouldBe(text("30"));
+    }
+
+    public void checkSelectPaymentTerm60Days(){
+        paymentTermDropDownMenu.shouldBe(text("60"));
+    }
+
+    public void checkSelectPaymentTerm90Days(){
+        paymentTermDropDownMenu.shouldBe(text("90"));
+    }
+
+    public void checkSelectPaymentTerm120Days(){
+        paymentTermDropDownMenu.shouldBe(text("120"));
+    }
+
+    public void checkNoErrorMessageUnderFieldInvoiceAmount(){
         errorMessageUnderFieldInvoiceAmountText.shouldNotBe(visible);
     }
 
@@ -113,7 +145,7 @@ public class FactoringCalculatorPage extends BasePage{
         return errorMessageUnderFieldInvoiceAmountText.is(text("Please enter a valid value"));
     }
 
-    public void CheckNoErrorMessageUnderFieldInterestRate(){
+    public void checkNoErrorMessageUnderFieldInterestRate(){
         errorMessageUnderFieldInterestRateText.shouldNotBe(visible);
     }
 
@@ -137,7 +169,7 @@ public class FactoringCalculatorPage extends BasePage{
         return errorMessageUnderFieldInterestRateText.is(text("Please enter a valid value"));
     }
 
-    public void CheckNoErrorMessageUnderFieldCommissionFee(){
+    public void checkNoErrorMessageUnderFieldCommissionFee(){
         errorMessageUnderFieldCommissionFeeText.shouldNotBe(visible);
     }
 
