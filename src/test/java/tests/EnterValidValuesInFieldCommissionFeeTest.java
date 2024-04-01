@@ -9,7 +9,7 @@ public class EnterValidValuesInFieldCommissionFeeTest extends BaseTest{
 
     @Test()
     @Parameters({"minValueForFieldCommissionFee"})
-    public void EnterMinValueInFieldCommissionFee(String minValueForFieldCommissionFee){
+    public void enterMinValueInFieldCommissionFee(String minValueForFieldCommissionFee){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldCommissionFee(minValueForFieldCommissionFee);
@@ -21,7 +21,7 @@ public class EnterValidValuesInFieldCommissionFeeTest extends BaseTest{
 
     @Test()
     @Parameters({"numericTwoDecimalPlacesForFieldCommissionFee"})
-    public void EnterNumericTwoDecimalPlacesInFieldCommissionFeeTest(
+    public void enterNumericTwoDecimalPlacesInFieldCommissionFeeTest(
             String numericTwoDecimalPlacesForFieldCommissionFee){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
@@ -34,7 +34,7 @@ public class EnterValidValuesInFieldCommissionFeeTest extends BaseTest{
 
     @Test()
     @Parameters({"maxValueForFieldCommissionFee"})
-    public void EnterMaxValueInFieldCommissionFeeTest(String maxValueForFieldCommissionFee){
+    public void enterMaxValueInFieldCommissionFeeTest(String maxValueForFieldCommissionFee){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldCommissionFee(maxValueForFieldCommissionFee);

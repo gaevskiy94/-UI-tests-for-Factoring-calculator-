@@ -10,7 +10,7 @@ public class EnterValidValuesInFieldInterestRateTest extends BaseTest{
 
     @Test()
     @Parameters({"minValueForFieldInterestRate"})
-    public void EnterMinValueInFieldInterestRateTest(String minValueForFieldInterestRate){
+    public void enterMinValueInFieldInterestRateTest(String minValueForFieldInterestRate){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldInterestRate(minValueForFieldInterestRate);
@@ -22,7 +22,7 @@ public class EnterValidValuesInFieldInterestRateTest extends BaseTest{
 
     @Test()
     @Parameters({"numericTwoDecimalPlacesForFieldInterestRate"})
-    public void EnterNumericTwoDecimalPlacesInFieldInterestRateTest(
+    public void enterNumericTwoDecimalPlacesInFieldInterestRateTest(
             String numericTwoDecimalPlacesForFieldInterestRate){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
@@ -35,7 +35,7 @@ public class EnterValidValuesInFieldInterestRateTest extends BaseTest{
 
     @Test()
     @Parameters({"maxValueForFieldInterestRate"})
-    public void EnterMaxValueInFieldInterestRateTest(String maxValueForFieldInterestRate){
+    public void enterMaxValueInFieldInterestRateTest(String maxValueForFieldInterestRate){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldInterestRate(maxValueForFieldInterestRate);

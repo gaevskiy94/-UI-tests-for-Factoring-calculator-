@@ -7,7 +7,7 @@ import pages.FactoringCalculatorPage;
 public class CalculateFactoringWithDefaultValuesTest extends BaseTest{
 
     @Test
-    public void DefaultValuesTest(){
+    public void defaultValuesTest(){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.clickButtonCalculate();

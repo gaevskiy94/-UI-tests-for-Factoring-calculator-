@@ -9,7 +9,7 @@ public class EnterValidValuesInFieldInvoiceAmountTest extends BaseTest{
 
     @Test()
     @Parameters({"minValueForFieldInvoiceAmount"})
-    public void EnterMinValueInFieldInvoiceAmountTest(String minValueForFieldInvoiceAmount){
+    public void enterMinValueInFieldInvoiceAmountTest(String minValueForFieldInvoiceAmount){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldInvoiceAmount(minValueForFieldInvoiceAmount);
@@ -21,7 +21,7 @@ public class EnterValidValuesInFieldInvoiceAmountTest extends BaseTest{
 
     @Test()
     @Parameters({"numericTwoDecimalPlacesForFieldInvoiceAmount"})
-    public void EnterNumericTwoDecimalPlacesInFieldInvoiceAmountTest(
+    public void enterNumericTwoDecimalPlacesInFieldInvoiceAmountTest(
             String numericTwoDecimalPlacesForFieldInvoiceAmount){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
@@ -34,7 +34,7 @@ public class EnterValidValuesInFieldInvoiceAmountTest extends BaseTest{
 
     @Test()
     @Parameters({"maxValueForFieldInvoiceAmount"})
-    public void EnterMaxValueInFieldInvoiceAmountTest(String maxValueForFieldInvoiceAmount){
+    public void enterMaxValueInFieldInvoiceAmountTest(String maxValueForFieldInvoiceAmount){
         FactoringCalculatorPage factoringCalculatorPage = new FactoringCalculatorPage();
 
         factoringCalculatorPage.inputValueInFieldInvoiceAmount(maxValueForFieldInvoiceAmount);
