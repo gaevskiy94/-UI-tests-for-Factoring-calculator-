@@ -9,6 +9,7 @@
         <listener class-name="org.testng.reporters.TestHTMLReporter"/>
     </listeners>
     <parameter name="minValueForFieldInvoiceAmount" value="1"/>
+    <parameter name="numericTwoDecimalPlacesForFieldInvoiceAmount" value="5200.01"/>
     <parameter name="maxValueForFieldInvoiceAmount" value=
             "999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
