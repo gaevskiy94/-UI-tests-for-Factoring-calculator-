@@ -2,6 +2,7 @@ package pages;
 
 import com.codeborne.selenide.SelenideElement;
 import org.openqa.selenium.By;
+import org.testng.Reporter;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
@@ -177,7 +178,7 @@ public class FactoringCalculatorPage extends BasePage{
         return errorMessageUnderFieldCommissionFeeText.is(text("Please fill out this field"));
     }
 
-    public boolean isErrorMessageAboutValueLessThanPermissibleInCommissionFee(){
+    public boolean isErrorMessageAboutValueLessThanPermissibleInFieldCommissionFee(){
         return errorMessageUnderFieldCommissionFeeText.is(text("Value must be greater than or equal 0"));
     }
 
@@ -205,7 +206,10 @@ public class FactoringCalculatorPage extends BasePage{
 
         for (char letter : lettersArray) {
             inputValueInFieldInvoiceAmount(String.valueOf(letter));
-            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) return true;
+            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) {
+                Reporter.log("The letter \"" + letter + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }
@@ -215,7 +219,10 @@ public class FactoringCalculatorPage extends BasePage{
 
         for (char letter : lettersArray) {
             inputValueInFieldInterestRate(String.valueOf(letter));
-            if (isErrorMessageInvalidValueInFieldInterestRate()) return true;
+            if (isErrorMessageInvalidValueInFieldInterestRate()){
+                Reporter.log("The letter \"" + letter + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }
@@ -224,7 +231,10 @@ public class FactoringCalculatorPage extends BasePage{
 
         for (char letter : lettersArray) {
             inputValueInFieldCommissionFee(String.valueOf(letter));
-            if (isErrorMessageInvalidValueInFieldCommissionFee()) return true;
+            if (isErrorMessageInvalidValueInFieldCommissionFee()){
+                Reporter.log("The letter \"" + letter + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }
@@ -239,7 +249,10 @@ public class FactoringCalculatorPage extends BasePage{
                 inputValueInFieldInvoiceAmount(symbol);
             }
 
-            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) return true;
+            if (isErrorMessageInvalidValueInFieldInvoiceAmount()) {
+                Reporter.log("The symbols \"" + symbol + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }
@@ -254,7 +267,10 @@ public class FactoringCalculatorPage extends BasePage{
                 inputValueInFieldInterestRate(symbol);
             }
 
-            if (isErrorMessageInvalidValueInFieldInterestRate()) return true;
+            if (isErrorMessageInvalidValueInFieldInterestRate()) {
+                Reporter.log("The symbols \"" + symbol + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }
@@ -269,7 +285,10 @@ public class FactoringCalculatorPage extends BasePage{
                 inputValueInFieldCommissionFee(symbol);
             }
 
-            if (isErrorMessageInvalidValueInFieldCommissionFee()) return true;
+            if (isErrorMessageInvalidValueInFieldCommissionFee()) {
+                Reporter.log("The symbols \"" + symbol + "\" is available for input.");
+                return true;
+            }
         }
         return false;
     }

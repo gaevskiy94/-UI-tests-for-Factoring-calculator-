@@ -37,4 +37,7 @@
     <parameter name="numberLessThanMinValidForFieldInterestRate" value="-0.01"/>
     <parameter name="numberThreeDecimalPlacesForFieldInterestRate" value="0.123"/>
     <parameter name="numberGreaterThanMaxValidForFieldInterestRate" value="20.01"/>
+    <parameter name="numberLessThanMinValidForFieldCommissionFee" value="-0.01"/>
+    <parameter name="numberThreeDecimalPlacesForFieldCommissionFee" value="0.123"/>
+    <parameter name="numberGreaterThanMaxValidForFieldCommissionFee" value="100.01"/>
 </suite>
