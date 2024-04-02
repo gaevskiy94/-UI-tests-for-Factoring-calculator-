@@ -34,4 +34,7 @@
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             999999999999999999.123"/>
+    <parameter name="numberLessThanMinValidForFieldInterestRate" value="-0.01"/>
+    <parameter name="numberThreeDecimalPlacesForFieldInterestRate" value="0.123"/>
+    <parameter name="numberGreaterThanMaxValidForFieldInterestRate" value="20.01"/>
 </suite>
